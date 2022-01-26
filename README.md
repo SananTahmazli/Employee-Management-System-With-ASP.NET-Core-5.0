@@ -1,0 +1,1 @@
+I developed Employee Management System. For this I used C#, ASP.NET Core, Entity Framework, MSSQL, NuGET Packages, Client-Side Library. This is a simple form for now. More improvements will be made in the future!

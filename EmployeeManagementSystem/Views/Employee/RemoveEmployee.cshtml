@@ -1,0 +1,58 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "RemoveEmployee";
+    Layout = "~/Views/Shared/BaseTemplate.cshtml";
+}
+
+<title>Remove Employee - Griffin SC</title>
+<h2>Remove Employee</h2>
+<br />
+
+<form method="post" asp-controller="Employee" asp-action="RemoveEmployeePost">
+    <input type="hidden" asp-for="ID" />
+    <div class="mb-3">
+        <label for="NameAndSurname" class="form-label">Name and Surname:</label>
+        <input disabled type="text" asp-for="NameAndSurname" class="form-control" id="NameAndSurname">
+    </div>
+
+    <div class="mb-3">
+        <label for="Salary" class="form-label">Salary:</label>
+        <input disabled type="text" asp-for="Salary" class="form-control" id="Salary">
+    </div>
+
+    <div class="mb-3">
+        <label for="City" class="form-label">City:</label>
+        <input disabled type="text" asp-for="City" class="form-control" id="City">
+    </div>
+
+    <div class="mb-3">
+        <label for="ExperienceLevel">Choose the Experience Level:</label>
+        <select disabled asp-for="ExperienceLevel" name="ExperienceLevel" id="ExperienceLevel">
+            <option value="---">---Select---</option>
+            <option value="Junior Developer">Junior Developer</option>
+            <option value="Middle Developer">Middle Developer</option>
+            <option value="Senior Developer">Senior Developer</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="BirthDate" class="form-label">Birth Date:</label>
+        <input disabled type="date" asp-for="BirthDate" class="form-control" id="BirthDate">
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-danger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eraser" viewBox="0 0 16 16">
+            <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z"/>
+        </svg>
+        Delete
+    </button>
+    &nbsp; &nbsp;
+    <a class="btn btn-dark" asp-controller="Employee" asp-action="Index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+        </svg>
+        Back
+    </a>
+</form>
